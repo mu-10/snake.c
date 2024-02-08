@@ -1,7 +1,7 @@
 #include "hardware.h"
 #include "paint.h"
-#include "paint.c"      // Include the 'paint' library
-#include "snake.h"      // Include the 'snake' library
+#include "paint.c"      
+#include "snake.h"     
 #include "snake.c"
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +11,6 @@
 
 #define EQUALS(v1, v2) printf( (v1) == (v2) ? "Ok\n" : "Not ok\n")
 
-// Set paint's size parameters to be equal to the snake ones
 const int NCOLS = X_SIZE; 
 const int NROWS = Y_SIZE;
 
@@ -32,7 +31,6 @@ int main() {
     
     srand(time(0));
     
-    // TODO Uncomment test functions one at the time and test
     
     // -- uncomment what you want to test --
     
@@ -40,8 +38,8 @@ int main() {
     test_snake_init();
     test_snake_move();
     test_snake_turn();
-    test_snake_hit_self(); // to pass, this needs snake_turn to be working too
-    test_snake_eat_apple();// to pass, this needs apple_new to be working too
+    test_snake_hit_self(); 
+    test_snake_eat_apple();
     
     // -- Visual help functions, uncomment to use
     visualize_snake_init();
